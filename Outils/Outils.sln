@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27428.2011
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Outils", "Outils\Outils.csproj", "{D7CC9FBD-10CF-4B4A-BDFF-5E9732DAFDB0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Outils.ViewModel", "Outils\Outils.ViewModel.csproj", "{D7CC9FBD-10CF-4B4A-BDFF-5E9732DAFDB0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Outils.View", "Outils.View\Outils.View.csproj", "{5134692C-5479-4868-A291-7A70971AD9C5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{D7CC9FBD-10CF-4B4A-BDFF-5E9732DAFDB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D7CC9FBD-10CF-4B4A-BDFF-5E9732DAFDB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D7CC9FBD-10CF-4B4A-BDFF-5E9732DAFDB0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5134692C-5479-4868-A291-7A70971AD9C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5134692C-5479-4868-A291-7A70971AD9C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5134692C-5479-4868-A291-7A70971AD9C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5134692C-5479-4868-A291-7A70971AD9C5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
