@@ -9,21 +9,35 @@ using System.Threading.Tasks;
 namespace Outils
 {
     /// <summary>
-    /// Implementation of INotfyPropertyChanged.
+    /// Implementation pour INotfyPropertyChanged.
     /// </summary>
     public abstract class NotifiableObject : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
         /// <summary>
-        /// This method is called by the Set accessor of each property.
-        /// The CallerMemberName attribute that is applied to the optional propertyName
-        /// parameter causes the property name of the caller to be substituted as an argument.
+        /// Méthode lançant PropertyChanged pour une propriété.
         /// </summary>
-        /// <param name="propertyName">Name of the property notifying a changement.</param>
-        private void NotifyPropertyChanged([CallerMemberName] String propertyName = "")
+        /// <param name="propertyName">Le nom de la propriété dont on souhaite notifier un changement.</param>
+        protected void NotifyPropertyChanged([CallerMemberName] String propertyName = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+        /// <summary>
+        /// Met à jour la valeur d'une propriété et lance PropertyChanged.
+        /// </summary>
+        /// <typeparam name="T">Le type de la propriété à valuer.</typeparam>
+        /// <param name="field">Le champs correspondant portant la valeur de la propriété.</param>
+        /// <param name="value">La valeur à affécter.</param>
+        /// <param name="propertyName">Le nom de la propriété</param>
+        /// <returns>true si la propriété a été modifiée, false sinon.</returns>
+        protected bool SetField<T>(ref T field, T value, [CallerMemberName] string propertyName = null)
+        {
+            if (EqualityComparer<T>.Default.Equals(field, value)) return false;
+            field = value;
+            NotifyPropertyChanged(propertyName);
+            return true;
         }
     }
 }
