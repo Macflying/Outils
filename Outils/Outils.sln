@@ -24,7 +24,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Outils.Model", "Outils.Mode
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Outils", "Outils", "{C770AA5D-BF27-4BB7-A862-DD4EEF6B2715}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SandBob", "SandBob", "{1D2DA5E8-AD5D-40C2-9A69-143444B4E81C}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SandBox", "SandBox", "{1D2DA5E8-AD5D-40C2-9A69-143444B4E81C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
