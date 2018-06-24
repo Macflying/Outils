@@ -6,25 +6,29 @@
         mc:Ignorable="d"
         Title="test validation" Height="450" Width="800">
     <Window.Resources>
-        <ResourceDictionary>
-            <Style TargetType="Label" x:Key="ErrorLabel">
-                <Setter Property="Foreground" Value="Red"/>
-            </Style>
-            <Style TargetType="Label" x:Key="TitleLabel">
-                <Setter Property="FontWeight" Value="Bold"/>
-            </Style>
-        </ResourceDictionary>
     </Window.Resources>
     <StackPanel Margin="50">
         <Label Content="Nom du personnage"
-               Style="{StaticResource TitleLabel}"/>
-        <TextBox Text="{Binding Nom.Value}"/>
+               Style="{StaticResource TitleLabelStyle}"/>
+        <TextBox Text="{Binding Nom.Value, UpdateSourceTrigger=PropertyChanged}"
+                 Style="{StaticResource TextEntry}"/>
         <Label Content="{Binding Nom.FirstError}"
-               Style="{StaticResource ErrorLabel}"/>
+               Style="{StaticResource ValidationErrorLabelStyle}"/>
         <Label Content="Description"
-               Style="{StaticResource TitleLabel}"/>
-        <TextBox Text="{Binding Description.Value}"/>
+               Style="{StaticResource TitleLabelStyle}"/>
+        <TextBox>
+            <TextBox.Style>
+                <Style TargetType="TextBox" BasedOn="{StaticResource TextEntry}">
+                    <Setter Property="Text" Value="{Binding Description.Value, UpdateSourceTrigger=PropertyChanged}"/>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding Nom.IsValid}" Value="false">
+                            <Setter Property="Foreground" Value="Red"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </TextBox.Style>
+        </TextBox>
         <Label Content="{Binding Description.FirstError}"
-               Style="{StaticResource ErrorLabel}"/>
+               Style="{StaticResource ValidationErrorLabelStyle}"/>
     </StackPanel>
 </Window>

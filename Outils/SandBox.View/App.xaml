@@ -1,9 +1,14 @@
 ﻿<Application x:Class="SandBox.View.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:SandBox.View"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/Outils.View;component/LabelStyles.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/Outils.View;component/TextBoxStyles.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/Outils.View;component/BorderStyles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

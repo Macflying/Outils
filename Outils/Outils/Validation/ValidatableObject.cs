@@ -11,7 +11,7 @@ namespace Outils.ViewModel.Validation
     public class ValidatableObject<T> : NotifiableObject, IValidity
     {
         #region IsValid
-        private bool _isValid;
+        private bool _isValid = true;
         /// <summary>
         /// L'objet est-il valide ?
         /// </summary>
@@ -47,8 +47,12 @@ namespace Outils.ViewModel.Validation
         public List<string> Errors
         {
             get => _errors;
-            set { if (SetField(ref _errors, value))
-                    NotifyPropertyChanged(nameof(FirstError)); }
+            set
+            {
+                if (SetField(ref _errors, value))
+                    // ça fonctionne parce qu'on "set" bien à chaque fois la liste dans la méthode Validate.
+                    NotifyPropertyChanged(nameof(FirstError));
+            }
         }
         public string FirstError { get { return Errors?.FirstOrDefault(); } }
         #endregion Errors
