@@ -68,7 +68,10 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PersonnageViewModel.cs" />
+    <Compile Include="AssociatedBugViewModel.cs" />
+    <Compile Include="FailingClassViewModel.cs" />
+    <Compile Include="FailingMethodViewModel.cs" />
+    <Compile Include="FailingTestViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

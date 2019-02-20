@@ -8,8 +8,8 @@ namespace SandBox.Model
 {
     public class Personnage
     {
-        string Nom { get; set; }
+        public string Nom { get; set; }
 
-        string Description { get; set; }
+        public string Description { get; set; }
     }
 }

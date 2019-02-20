@@ -11,7 +11,6 @@ namespace SandBox.View
         public MainWindow()
         {
             InitializeComponent();
-            DataContext = new PersonnageViewModel();
         }
     }
 }

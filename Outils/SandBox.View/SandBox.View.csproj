@@ -34,10 +34,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Outils, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Outils\bin\Debug\Outils.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
@@ -66,6 +62,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="MainViewModel.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -101,6 +98,10 @@
     <ProjectReference Include="..\Outils.View\Outils.View.csproj">
       <Project>{5134692c-5479-4868-a291-7a70971ad9c5}</Project>
       <Name>Outils.View</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Outils\Outils.ViewModel.csproj">
+      <Project>{D7CC9FBD-10CF-4B4A-BDFF-5E9732DAFDB0}</Project>
+      <Name>Outils.ViewModel</Name>
     </ProjectReference>
     <ProjectReference Include="..\SandBox.Model\SandBox.Model.csproj">
       <Project>{4541d877-16f6-48bc-abbb-e4603f0eed6c}</Project>

@@ -1,17 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Linq;
 using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Outils
+namespace Outils.ViewModel
 {
     /// <summary>
     /// Implementation pour INotfyPropertyChanged.
     /// </summary>
-    public abstract class NotifiableObject : INotifyPropertyChanged
+    public abstract class NotifiableObjectBase : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
 

@@ -53,9 +53,11 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CommandHandler.cs" />
     <Compile Include="Converters\ToVisibility\BooleanFalseToVisibilityConverter.cs" />
     <Compile Include="Converters\ToVisibility\StringToVisibilityConverter.cs" />
-    <Compile Include="NotifiableObject.cs" />
+    <Compile Include="ListViewModel\ListViewModelBase.cs" />
+    <Compile Include="NotifiableObjectBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
